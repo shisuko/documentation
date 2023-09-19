@@ -143,5 +143,4 @@ And there you have installed a docker container for mysql !
 
 ***
 
-Discord : shisukopy
-
+Twitter : @Shisukkko
