@@ -89,28 +89,6 @@ You can get information about any command by typing :
 <command> --help
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ***
 
 Twitter : @Shisukkko
