@@ -10,6 +10,12 @@ Documentation made by Shisuko
 3. Utility
 4. File system
 5. Bash
+6. Install application in Linux   
+6.1 Debian based   
+6.2 Arch based   
+7. Configure applications in linux
+
+
 
 
 ## 1. What's Linux ?
@@ -42,7 +48,7 @@ The "/etc" folder is where every text configuration file are stored.
 The "/srv" folder is for service.   
 The "/home" folder is where every user home is stored.   
 The "/tmp" is a folder that contain temporaray file (it clean up after shutdown).   
-The "/lib" is a link to "/usr/lib". 
+The "/lib" is a link to "/usr/lib".  
 The "/usr" is a folder that contain user file.   
 The "/media" is a folder where external drive will be mount.   
 The "/var" is a folder that contain different variable.   
@@ -88,6 +94,72 @@ You can get information about any command by typing :
 ```bash
 <command> --help
 ```
+
+## 6. Install applications in Linux
+
+Install applications in linux is different in every distribution, for example in ubuntu you have what's called the snap store which contain a lot of application to install. But you rarely install applications via this store. In linux you can use the terminal to do everything. Here's how to install application in the most used distribution.
+
+### 6.1 Debian based
+
+In linux we use what's called "Package manager" it's a software that download, store and manage app via a simple command. In debian :
+
+To install applications:
+```bash
+sudo apt install <package>
+```
+
+In debian you can also download manualy the package which are .deb and use dpkg to install it (dpkg don't install dependencies, apt does)
+
+```
+sudo dpkg -i <package>
+```
+
+To uninstall applications : 
+```bash
+sudo apt remove <package>
+```
+
+
+
+### 6.2 Arch based
+
+In arch the package manager is called "Pacman"
+
+To install applications :
+```bash
+sudo pacman -S <package>
+```
+
+To uninstall applications :
+```bash
+sudo pacman -R <package>
+```
+
+## 7. Configure applications in linux
+In Linux every config are store in /etc and it's text file. So you can edit every configs files just by opening them. Here's how to config a simple ssh server in linux.
+
+First of all we need to download a text editor. Depends on your distribution you may already have one like nano, vi, vim...   
+I personnaly recommend "vim" it's fast, simple and very cool ! To download it type this command (debian) : 
+
+```bash
+sudo apt install vim
+```
+
+After this download the ssh server :
+
+```bash
+sudo apt update
+sudo apt install openssh-server ssh
+```
+
+Now you have installed ssh you can configure it by using this command :
+
+```bash
+sudo vim /etc/ssh/sshd_config
+```
+You can now press "i" to enter into the insert mode.
+
+And now you can edit every parameter that you want don't forget to type "ESC + : + wq" to quit and save you change made by vim ! 
 
 ***
 
