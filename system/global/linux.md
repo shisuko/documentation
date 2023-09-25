@@ -14,7 +14,7 @@ Documentation made by Shisuko
 6.1 Debian based   
 6.2 Arch based   
 7. Configure applications in linux
-
+8. Scripts
 
 
 
@@ -161,6 +161,28 @@ You can now press "i" to enter into the insert mode.
 
 And now you can edit every parameter that you want don't forget to type "ESC + : + wq" to quit and save you change made by vim ! 
 
+## 8. Scripts
+In linux you can create scripts to do some actions automaticly. For example imagine that you want to create a file, append some content into it and then show the content of the file. You can create a script to do it. Just create a file call "your_script.sh" and then use a text editor to write into it. Here's how the script is make : 
+
+```bash
+#/usr/bin/bash
+
+touch test.txt # Create the file
+echo "Hello world !" >> test.txt # Add content into it
+cat test.txt # Show the content of the file.
+```
+
+Then you can type this command to make it executable : 
+
+```bash
+sudo chmod +x script.sh
+```
+
+And then you can run it by this command : 
+
+```bash
+./script.sh
+```
 ***
 
 Twitter : @Shisukkko
