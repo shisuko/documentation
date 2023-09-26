@@ -9,6 +9,7 @@ Documentation made by Shisuko
 1. First of all
 2. Arch install
 3. Arch config
+4. Extra
 
 ## 1. First of all
 First of all you will need a bootable usb stick with arch linux installed on it. You can download the iso on the official arch website and make the bootable key with refus or balena etcher.
@@ -163,6 +164,22 @@ ln -sf /usr/share/zoneinfo/<country>/<city> /etc/localtime
 ```
 
 You can now install neofetch and enjoy your arch install !
+
+## 4. Extra
+
+In arch there's no sudo group, to use sudo you need to be on the weel group. First of all add your user to the grou by this command :
+
+```bash
+usermod -aG wheel <user>
+```
+
+Then you need to config the /etc/sudoers file, you need to uncomment this line in the file :
+
+```
+# %wheel ALL=(ALL:ALL) ALL
+```
+
+Then you should have the sudo working,
 
 ***
 
