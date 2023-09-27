@@ -107,8 +107,8 @@ pacstrap /mnt base base-devel linux linux-firmware vim
 This command will install the system and also install package like base, base-devel etc... which are pretty basics packages that you want on linux.
 
 We can now create a FSTab config by this command :
-```
-genfstap -U /mnt
+```bash
+genfstap -U /mnt >> /mnt/etc/fstab
 ```
 
 We can now chroot into our installation using this command :
