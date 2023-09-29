@@ -56,7 +56,6 @@ The "/var" is a folder that contain different variable.
 The "/mnt" is a folder where you can mount manualy your drive.
 
 In the "/usr" folder, there's other folder like bin, lib and sbin.
-
 The "/usr/sbin" folder contain super-user application (require super-user perm to execute it).   
 The "/usr/bin" folder contain application.   
 The "/usr/lib" is a folder that contain necessary librairy for linux to run.  
