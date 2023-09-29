@@ -15,6 +15,7 @@ Documentation made by Shisuko
 6.2 Arch based   
 7. Configure applications in linux
 8. Scripts
+9. Pipe and redirection
 
 
 
@@ -88,6 +89,19 @@ Here's a list of command that you can do on linux (debian) :
 |ln|Create a link to a file or a folder|link \<source> \<destination>|ln test.txt /opt/test.txt|
 |kill|Kill a processus|kill \<pid>|kill 1442|
 |sudo|Execute with superuser|sudo \<command>|sudo pwd|
+|which|Show the path of a command|which \<command>|which curl|
+|type|Show information about a commmand|type \<command>|type cd|
+|apropos|Search in the manual|apropos \<search>|apropos partition|
+|alias|Create a alias|alias \<nom>="\<command>"|alias clear="clear && neofetch"|
+|unalias|Remove a alias|unalias \<aliasName>|unalias clear|
+|grep|Search a string in a file|\<command>\| grep \<string> |cat .bashrc \| grep "bash"|
+|cat|Concat multiple file together|cat \<file> \<file> |cat text.txt test2.txt|
+|sort|Sort a file|sort \<file> |sort test.txt|
+|uniqu|Return unique value of a file|uniqu \<file>|unqiq file.txt|
+|wc|Give information about file|wc \<file>|wc file.txt|
+|head|Show x number of line of a file|head -n \<numberLines> \<file>|head -n 5 test.txt|
+|tail|Show x number of line of the bottom of a file|tail -n \<numberLines> \<file>|tail -n 5 test.txt|
+
 
 You can get information about any command by typing : 
 
@@ -105,18 +119,18 @@ In linux we use what's called "Package manager" it's a software that download, s
 
 To install applications:
 ```bash
-sudo apt install <package>
+$ sudo apt install <package>
 ```
 
 In debian you can also download manualy the package which are .deb and use dpkg to install it (dpkg don't install dependencies, apt does)
 
-```
-sudo dpkg -i <package>
+```bash
+$ sudo dpkg -i <package>
 ```
 
 To uninstall applications : 
 ```bash
-sudo apt remove <package>
+$ sudo apt remove <package>
 ```
 
 
@@ -127,12 +141,12 @@ In arch the package manager is called "Pacman"
 
 To install applications :
 ```bash
-sudo pacman -S <package>
+$ sudo pacman -S <package>
 ```
 
 To uninstall applications :
 ```bash
-sudo pacman -R <package>
+$ sudo pacman -R <package>
 ```
 
 ## 7. Configure applications in linux
@@ -142,20 +156,20 @@ First of all we need to download a text editor. Depends on your distribution you
 I personnaly recommend "vim" it's fast, simple and very cool ! To download it type this command (debian) : 
 
 ```bash
-sudo apt install vim
+$ sudo apt install vim
 ```
 
 After this download the ssh server :
 
 ```bash
-sudo apt update
-sudo apt install openssh-server ssh
+$ sudo apt update
+$ sudo apt install openssh-server ssh
 ```
 
 Now you have installed ssh you can configure it by using this command :
 
 ```bash
-sudo vim /etc/ssh/sshd_config
+$ sudo vim /etc/ssh/sshd_config
 ```
 You can now press "i" to enter into the insert mode.
 
@@ -175,14 +189,64 @@ cat test.txt # Show the content of the file.
 Then you can type this command to make it executable : 
 
 ```bash
-sudo chmod +x script.sh
+$ sudo chmod +x script.sh
 ```
 
 And then you can run it by this command : 
 
 ```bash
-./script.sh
+$ ./script.sh
 ```
+
+You can use variables in bash script to create a variable you need to put a "$" before the name of the variable :
+
+```bash
+#/usr/bin/bash
+$hello = "Hello world!" # Create a variable that contain the string "Hello world!"
+
+echo $hello # Print the content of the variable on the screnn
+```
+
+You can also use positioning variable so when you're using you script you can add parameter :
+
+```bash
+#/usr/bin/bash
+
+echo $0 # Print the parameter
+```
+
+So when you're running your script like this :
+
+```bash
+$ ./script.sh "Hello world"
+```
+
+## 9. Pipe and redirection
+
+You can reddirect the output of a command into a file :
+
+```bash
+$ cat .bashrc >> hey.txt 
+```
+
+You can also reddirect the output to another command with a pipe :
+
+```bash
+$ cat .bashrc | grep "txt"
+```
+
+We can send the normal output and the error output differently : 
+
+```bash
+$ ls >> test.txt 2> error.txt # We send the ls ouput to test.txt and the error output into error.txt
+```
+
+We can hide the output :
+
+```bash
+$ ls >> /dev/null
+```
+
 ***
 
 Twitter : @Shisukkko
