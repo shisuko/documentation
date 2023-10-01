@@ -16,6 +16,7 @@ Documentation made by Shisuko
 7. Configure applications in linux
 8. Scripts
 9. Pipe and redirection
+10. Services
 
 
 
@@ -246,7 +247,39 @@ We can hide the output :
 $ ls >> /dev/null
 ```
 
-***
+## 10. Services
 
+You can create a services in linux by editing a file in /etc/systemd/system/. Here's the syntax for basic services :
+
+```bash
+[Unit]
+Description=Minecraft Service # Description of the services
+
+[Service]
+ExecStart=./$HOME/mcserver/start.sh # Executing command 
+
+[Install]
+WantedBy=multi-user.target
+```
+
+We can know reload systemd :
+
+```bash
+$ sudo systemctl daemon-reload
+```
+
+And then enable our service :
+
+```bash
+$ sudo systemctl enable minecraft.service
+```
+
+Then you can check the status of the service by typing :
+
+```bash
+$ systemctl status minecraft.service
+```
+
+***
 Twitter : @Shisukkko
 
