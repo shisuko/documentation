@@ -80,7 +80,7 @@ Here's a list of command that you can do on linux (debian) :
 |mv|Move file to a folder|mv \<source> \<destination>|mv ~/test.txt ~/documents|
 |whoami|Display current user|whoami|whoami|
 |rm|Remove file or folder|rm \<file>|rm ~/documents/test.txt|
-|mdkr|Create direcotry|mkdir \<direcotry>|mkdir test|
+|mkir|Create direcotry|mkdir \<direcotry>|mkdir test|
 |exit|Exit session|exit|exit|
 |su|Switch user|su \<user>|su root|
 |echo|Return a variable|echo \<variable>|echo $HOME|
