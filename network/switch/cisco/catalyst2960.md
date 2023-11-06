@@ -37,23 +37,23 @@ Documentation made by Shisuko
 |       Mode        |       Command         |       Description         |       Example     |
 |         -         |           -           |           -               |          -        |
 |||||
-| | | **Modes** | |
+|**Modes**|
 |>|enable|Switch to  # mode|enable|
 |#|configure terminal or config t|Switch to configuration mode|configure terminal|
 |(config)#|interface \<interface>|Switch to interface configuration mode|interface Fa0/1|
 |(config)#|vlan \<vlan>|Switch to vlan configuration mode|vlan 5|
 |||||
-| | | **Interfaces** | |
+|**Interfaces**|
 |(config-if)#|switchport mode access|force port to an access port|switchport mode access|
 |(config-if)#|switchport access vlan \<vlan>|Switch port to a specific vlan|switchport access vlan 3|
 |(config-if)#|description \<desription>|set a description to the port|description "MainNet"|
 |(config-if)#|switchport mode access|force port to an access port|switchport mode access|
 |||||
-| | | **Vlans** | |
+|**Vlans**|
 |(config-vlan)#|ip address \<ip> \<mask>|set a management IP for the switch in the vlan|ip address 192.168.1.2 255.255.255.0|
 |(config-vlan)#|name \<name>|set a name to the Vlan|name Vlan-Test|
 |||||
-| | | **System** | |
+|**System**|
 |(config)#|hostname \<hostname>|Set switch hostname|hostname switch01|
 |(config)#|ntp authentificate|Enable NTP|ntp authentificate|
 |(config)#|ntp server \<ntp_server_ip>|Set ntp server|ntp server 62.12.167.109|
@@ -82,7 +82,7 @@ We can now SSH into our switch.
 
 ### 4.2 - Update with TFTP
 
-<p class=warning>You need a management ip to update with tftp<p>
+You need a management ip to update with tftp
 
 To update a switch you will need a TFTP server. Fist of you need to install a TFTP server like TFTPD64, TFTPD32 or Solarwings TFTP. After you download the TFTP server you will need to download the firmware on the manufacturer website, then launch the tftp server and add the firmware to the TFTP server. Then launch this command on the switch to download the firmware from de server. 
 
@@ -114,7 +114,7 @@ You can now set the Management IP.
 
 ### 4.4 - Backup config
 
-<p class=warning>To backup the config you will need a management IP and TFTP server<p>
+To backup the config you will need a management IP and TFTP server
 
 To backup the config you will need to save it in a ile first with this command.
 
@@ -143,13 +143,3 @@ Github : https://github.com/shisuko
 Website : http://shisuko.net
 
 ---
-
-
-<!-- CSS -->
-<style>
-.warning {
-    color:#ff4a4a;
-    font-weight:bold;
-    font-style:italic;
-}
-<style>
