@@ -16,7 +16,8 @@ Documentation made by Shisuko
 7. Configure applications in linux
 8. Scripts
 9. Pipe and redirection
-10. Services
+10. Environnement variables, *, ~ etc...
+11. Services
 
 
 
@@ -247,7 +248,57 @@ We can hide the output :
 $ ls >> /dev/null
 ```
 
-## 10. Services
+## 10. Environnement variables, *, ~ etc...
+
+There's different sign in bash that can be used to do different actions.
+
+The \* sign mean "all" you can use it to list all the files from a folder.
+
+```bash
+ls /etc/ssh/.conf
+``` 
+
+In this example we list all the file from /etc/ssh that end with a .conf 
+
+The ~ sign is the home of the current user.
+
+```bash
+cd ~
+```
+
+In this example we change our directory to the home directory
+
+We can set a environnemental varibles with the export command.
+
+```bash
+export test=10
+```
+
+In this example we create a variable and give it a value, then if we echo the variable. 
+
+```
+echo $test
+
+output : 10 
+```
+
+We can set a array of number with the {} sign.
+
+```bash
+echo "test"{1..2}
+
+output : test1 test2
+```
+
+We can run command as a variable.
+
+```bash
+echo $(ls)
+
+output : ls as a string
+```
+
+## 11. Services
 
 You can create a services in linux by editing a file in /etc/systemd/system/. Here's the syntax for basic services :
 

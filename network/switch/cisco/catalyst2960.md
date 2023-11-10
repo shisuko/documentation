@@ -58,7 +58,7 @@ Documentation made by Shisuko
 |(config)#|ntp authentificate|Enable NTP|ntp authentificate|
 |(config)#|ntp server \<ntp_server_ip>|Set ntp server|ntp server 62.12.167.109|
 |#|copy running-config \<configure filename>|copy the current config into a file|copy running-config switch.conf|
-
+|(config)#|vtp mode|set VTP mode|vtp mode transparent|
 
 
 
