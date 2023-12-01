@@ -1,41 +1,43 @@
-# Basic
+# Network
 
-Documentation made by Shisuko
+Documentation made by Ravenn
 
 *** 
 
 ## Summary
 
-1. What's a IP adress
-2. Mask
-3. Gateway
-4. DNS
-5. Network ID
-6. Broadcast
-7. Subnets
-8. Reverse Mask
+- [1. Basics]()
+    - [1.1 Network]()
+    - [1.2 IP address]()
+    - [1.3 Mac adress]()
+    - [1.4 Subnet mask]()
+    - [1.5 Gateway]()
+    - [1.6 Port (logical)]()
+    - [1.7 DNS]()
+    - [1.8 DHCP]()
+    - [1.9 TCP/IP & OSI model]()
+- [2. Network devices]()
+    - [2.1 Cables]()
+        - [2.1.2 Ethernet, FastEthernet...]()
+        - [2.1.2 Fiber]()
+    - [2.2 Networt adapter]()
+    - [2.3 Router]()
+    - [2.4 Firewall]()
+    - [2.5 Switch]()
+- [3. Network concept]()
+	- [3.1 Network topology]()
+	- [3.2 Device link]()
+	- [3.3 Vlan]()
+- [4. Others small network concept]()
+	- [4.1 Broadcast storm]
+    
+---
 
-## 1. What's a IP adress
-A "IP adress" is the internet protocol adress. It's the adress of the machine in a network. There's 2 type of IP adress, Public IP adress and Private IP adress.
-
-The Public IP adress is the adress of your network in internet.
-
-The Private IP adress is the adress of your machine in intranet.
-
-A ip look like this : 10.205.103.202. It's compose of 4 part
 
 
 
-
-## 2. Mask
-## 3. Gateway
-## 4. DNS
-## 5. Network ID
-## 6. Broadcast
-## 7. Subnets
-## 8. Reverse Mask
 
 
 ***
 
-Twitter : @Shisukkko
+Twitter : @ravenn76
