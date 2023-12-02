@@ -2,6 +2,10 @@
 
 Documentation by Ravenn
 
+*If you see any errors in this documentation, don't hesite to create a push requests on this repo :)*
+
+*It may also contain some spelling mistakes, as english is not my first language*
+
 ---
 
 
@@ -19,15 +23,7 @@ Documentation by Ravenn
 
 
 
-
-
-
-
-
-
-
 ---
-
 
 
 
@@ -636,8 +632,8 @@ And there you have installed a docker container for mysql !
     - [1.5 Gateway](#15-gateway)
     - [1.6 Lan, wan etc...](#16-lan-wan-etc)
     - [1.7 Port (logical)](#17-port-logical)
-    - [1.8 DNS]()
-    - [1.9 DHCP]()
+    - [1.8 DNS](#18-dns)
+    - [1.9 DHCP](#18-dhcp)
     - [1.10 TCP/IP & OSI model]()
 - [2. Network devices]()
     - [2.1 Cables]()
@@ -705,6 +701,7 @@ The answer : No because they are not in the same network (10.204.123.x and 10.20
 
 #### **1.4 Mac address**
 
+The MAC address is the physical address of a device, like IP address it must be unique in the network. MAC address are use to communicate between device. The MAC address is compose of 6 bytes part. 
 
 #### **1.5 Gateway**
 
@@ -729,6 +726,36 @@ VLAN mean *Virtual local area network* (for switch and router)
 
 #### **1.7 Port (logical)**
 
+In network we combined IP address with ports. Ports are a number between 1 and 65535 (16-bit integers). We use port to redirect packets on the good protocoles or services. Let's take a example. We have a computer that want to access to a website host on a server. His IP is 51.12.333.21. If we make a request to server server, he will send packets back. But he need to know which packets he need to send. So we make a request on the ip 51.12.333.21 with the port 80 (http default port). And now the server know that he need to send http packets to the client.
+
+##### **1.7.1** Basics ports
+
+There're some default ports for service. In many cases, we change them for security reason. But it's always great to know the basics ones.
+
+| Port  | Service  |
+|   -   |    -     |
+|   20 and 21  | FTP |
+|   22  | SSH |
+|   23  | Telnet |
+|   25  | SMTP|
+|   37  | NTP |
+|   69  | TFTP |
+|   80  | HTTP |
+|   443 | HTTPS |
+
+All the others ports are list here : *https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers*
+
+#### **1.8 DNS**
+
+DNS mean "*Domain name server*", in the IP (Internet Protocole) we use only IP address to access a device. But IP address are hard to remember, and it would be impossible to remember the IP of all website in the world. So we create domaine name. You know a lot of domains names like google.com or wikipedia.org. So instead of using IP to connect into the website, we use the domain name. But we need to translate this domain name into a IP.
+
+And this is why they're DNS. A DNS is just a server with a hudge database that contains all the domaine name and the IP where they point at. 
+
+They are what we call the "*root dns*. They are the DNS server at the top. They contains all the domains names of the world. In current date (2023), they are 13 root dns all around the world. The root dns will distribute changes to the others dns server that are call the "*slaves dns*". Slaves DNS are dns that contains domain name but syncronise their databases with the root dns.
+
+#### **1.8 DHCP**
+
+To assign a IP address there're 2 two to do it. The first one is by assign a IP manualy. But this method would be pain if you would need to assign IP for a lot of device. So there's what we call DHCP server. DHCP stand for Dynamic Host Configuration Protocol. You can install a DHCP service that will provides IP automaticly to computer connected on your network. DHCP server has a few adventage, like the possibily to set what we call a lease time to controll the duration of the IP attribution. It also let you reserve IP or exclude IP.
 
 ***
 Twitter : @ravenn76
