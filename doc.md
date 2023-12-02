@@ -4,7 +4,7 @@ Documentation by Ravenn
 
 *If you see any errors in this documentation, don't hesite to create a push requests on this repo :)*
 
-*It may also contain some spelling mistakes, as english is not my first language*
+*It may also contain some spelling mistakes, as english is not my first language...*
 
 ---
 
@@ -14,7 +14,7 @@ Documentation by Ravenn
 **System**
 - **[Linux](#linux)**
 - **[Docker](#docker)**
-- **[MySQL](#mysql)**
+
 
 **Network**
 - **[Network bases](#network-bases)**
