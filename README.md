@@ -8,7 +8,11 @@ Documentation by Ravenn
 
 
 
+<div style="height: 30%; width: 30%; display: block; margin-left: auto; margin-right: auto;margin-bottom:-10%">
 
+![Image not found](img/icon.png)
+
+</div>
 
 ---
 
