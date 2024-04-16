@@ -67,7 +67,7 @@ Linux is great for running server. More than 90% webserver of the world are debi
 #### **4. File system**
 Here is the linux files system : 
 
-![Image not found](/img/linux-filesystem.webp)
+![Image not found](img/linux-filesystem.webp)
 
 Let me explain all this folder. First of all linux use one and only one file system which is "/" even if you plug a external drive in your computer it won't be another file system.
 
