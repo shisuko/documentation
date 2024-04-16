@@ -28,13 +28,9 @@ Documentation by Ravenn
 
 <!------------------------------------------------ -->
                 
-                <!-- System part -->
-
-
 ## System
 
 
-<!------------------------------------------------ -->
 
 ### **Linux**
 
@@ -629,13 +625,13 @@ And there you have installed a docker container for mysql !
 <!------------------------------------------------ -->
 
 
-                <!-- Network part -->
+
+
 
 
 ## Network
 
 
-<!------------------------------------------------ -->
 
 
 
@@ -795,12 +791,8 @@ To assign a IP address there're 2 two to do it. The first one is by assign a IP 
 <!------------------------------------------------ -->
 
 
-<!-- Footer part -->
-
-
 ***
 Twitter : @ravenn76
 
-<!------------------------------------------------ -->
 
 
