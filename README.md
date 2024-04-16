@@ -791,7 +791,8 @@ To assign a IP address there're 2 two to do it. The first one is by assign a IP 
 
 
 ***
-Twitter : @ravenn76
 
+Mail : ravenn76@proton.me
+Discord : ravenn766
 
 
